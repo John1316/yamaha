@@ -1,0 +1,176 @@
+
+// .partners {
+//   padding: 42px 295px;
+//   .owl-item {
+//     margin: 0 !important;
+//     width: 100%;
+//     .partners-item {
+//       margin: auto;
+//       display: block;
+//       img { 
+//         object-fit: contain;
+//         margin: auto;
+//       }
+//     }
+//   }
+// }
+
+
+
+// .partners {
+//   padding: 42px 0; 
+//   .owl-stage {
+//     display: -webkit-box;
+//     display: -moz-box;
+//     display: -ms-box;
+//     display: box;
+//     }
+// }
+
+@media screen and (max-width:480px){
+  .owl-carousel .owl-item img {
+    object-fit: contain;
+    margin: auto;
+  }
+}
+
+.carousel .banner img {
+  object-fit: cover;
+}
+
+.productsListing .slideDots li {
+  cursor: pointer;
+  span {
+    transition: width 0.5s ease, background-color 0.2s ease-in-out;
+  }
+}
+
+.productsListing {
+  user-select: none;
+  overflow: hidden;
+  height: 695px !important;
+  .slideDots,
+  .prevArrow,
+  .nextArrow {
+    z-index: 3 !important;
+  }
+  .productsContainer {
+    overflow: visible !important;
+    .productBox {
+      transform: translateX(100vw);
+      a img {
+        transition: all 0.5s ease;
+      }
+    }
+  }
+  .tab-pane {
+    background-size: cover !important;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1.5s ease;
+    z-index: 1;
+    &.active {
+      z-index: 2;
+    }
+    & > .animateLeftTop,
+    & > .animateLeftBottom {
+      left: 150vw;
+    }
+    & > .animateRightTop,
+    & > .animateRightBottom {
+      right: 150vw;
+    }
+  }
+}
+
+.categories {
+  li {
+    .downArrow {
+      display: none;
+    }
+    &.active {
+      .downArrow {
+        display: block;
+      }
+    }
+  }
+}
+
+.footerContent #goTop {
+  z-index: 5;
+}
+
+@media screen and (max-width: 1200px) {
+  .productsListing {
+    height: 895px !important;
+  }
+  .tab3Content,
+  .tab1Content {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .animateLeftTop,
+  .animateRightTop,
+  .animateLeftBottom,
+  .animateRightBottom {
+    display: none !important;
+  }
+  .productsListing {
+    &.block_0 {
+      height: 875px !important;
+    }
+    &.block_1 {
+      height: 1245px !important;
+    }
+    &.block_2 {
+      height: 1045px !important;
+    }
+    .tab-pane {
+      padding: 0 !important;
+    }
+  }
+  .categories .downArrow {
+    display: none !important;
+  }
+  footer .footerContent {
+    padding: 40px 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .productsListing {
+    &.block_0 {
+      height: 755px !important;
+    }
+    &.block_1 {
+      height: 1045px !important;
+    }
+    &.block_2 {
+      height: 875px !important;
+    }
+    .tab-pane {
+      padding: 0 !important;
+    }
+  }
+}
+
+footer .contacts a,
+.searchResult .dealerPhoneNumber a {
+  color: white;
+  font-size: 15px;
+  font-family: "MyriadPro" !important;
+  &:hover {
+    color: white;
+  }
+}
+
+
+footer .shopOnline a img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 120px;
+}
