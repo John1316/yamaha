@@ -246,11 +246,14 @@ footer .search select {
 /* video section */
   .video{
       background-image: url(../images/audio-visual-bg.jpg);
+      background-size: cover;
+      background-position: center center;
     padding: 104px 0;
   }
   .video .video_slider .card{
     background-color: transparent;
     border: none;
+    color: #fff;
   }
   .video .video_slider .card-img-top{
     height: 300px;
@@ -290,7 +293,7 @@ footer .search select {
     .video .video_slider .item{
         display: flex;
         justify-content: center;
-        border-right: 1px solid #ccc;
+        /* border-right: 1px solid rgb(167, 166, 166); */
         
     }
     .video .video_slider .item .card-img{

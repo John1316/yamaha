@@ -21,7 +21,35 @@ $(document).ready(function () {
             }
         });
     });
-
+    $(".carousel .owl-carousel").owlCarousel({
+        loop: true,
+        autoplay: true,
+        margin: 0,
+        nav: true,
+        navText: ["<img class='sliderLeftArrow' src='/images/slider-arrow.png'>", "<img class='sliderRightArrow' src='/images/slider-arrow.png'>"],
+        items: 1,
+        rtl: isRtl
+    });
+    $(".partners .owl-carousel").owlCarousel({
+        loop: true,
+        margin: 35,
+        dots: false,
+        //autoWidth:true,
+        responsive: {
+            0: {
+                items: 1,
+                stagePadding: 70
+            },
+            768: {
+                items: 2,
+                stagePadding: 70
+            },
+            992: {
+                items: 4
+            }
+        },
+        rtl: isRtl
+    });
     //$(".productsContainer").swiperight(function () {
     //    $('.prevArrow').trigger('click');
     //});
@@ -157,6 +185,12 @@ var newSlider = $('.news_slider') ;
 			}
 		}
 	});
+    newSlider.ready(function() {
+        for (let slider = 0; newSlider < newSlider.length; slider++) {
+            $('.owl-item.active .item:last-child').css('border-right','0');
+            
+        }
+    });
 	// video slider
 var videoSlider = $('.video_slider') ;
 	videoSlider.owlCarousel({
