@@ -209,7 +209,7 @@ footer .search select {
   }
   .news{
       background-color: #000000;
-      padding: 104px 0;
+      padding: 50px 0;
 
   }
   .news .news_slider .item{
@@ -227,10 +227,19 @@ footer .search select {
     border: none;
     width: 260px;
     color: #fff;
-    min-height: 467px;
   }
-  .news .news_slider .owl-dots , .video .video_slider .owl-dots{
-    margin-top: 30px !important;
+  @media screen and (max-width:420px) {
+    .news .news_slider .card{
+
+        width: 150px;
+    }
+  }
+  .news .news_slider .owl-dots{
+    padding-top: 30px !important;
+  }
+  .video .video_slider .owl-dots{
+    padding-top: 15px !important;
+
   }
   .news .news_slider .card .card-title{
     margin: 15px 0;
@@ -258,21 +267,34 @@ footer .search select {
   .video .video_slider .card-img-top{
     height: 300px;
     border-radius: 10px;
-    box-shadow: 6px 4px 8px rgb(0 0 0 / 60%);
+    box-shadow: 6px 4px 8px rgb(0 0 0 / 30%);
   }
   .video .video_slider .owl-next img{
       height: 40px;
       border-radius: 4px;
-      position: absolute;
-      top: 50%;
-      right: -20px;
+      
+    }
+    .video .video_slider .owl-stage-outer{
+        position: relative;
     }
     .video .video_slider .owl-prev img{
         height: 40px;
         border-radius: 4px;
+       
+    }
+  .video .video_slider .owl-next {
+      
+      position: absolute;
+      top: 50%;
+      right: -40px;
+      transform: translateY(-50%);
+    }
+    .video .video_slider .owl-prev {
+        
         position: absolute;
         top: 50%;
-        left: -20px;
+        left: -40px;
+        transform: translateY(-50%);
     }
     @media screen and (max-width:769px) {
         .video .video_slider .owl-next img{
@@ -290,12 +312,25 @@ footer .search select {
             left: 0;
         }
     }
-    .video .video_slider .item{
+    .video .video_slider .owl-item.active .item{
         display: flex;
         justify-content: center;
-        /* border-right: 1px solid rgb(167, 166, 166); */
+
         
     }
+    /* .video .video_slider .owl-item.active .item{
+        border-right: 1px solid #fff;
+    }
+     */
+    .video .video_slider .owl-item.active:first-child(1){
+        border-right: none;
+    }
+    .video .video_slider .owl-item.active:first-child(2){
+        border-right: none;
+    }
+    
+
+
     .video .video_slider .item .card-img{
         position: relative;
     }
@@ -307,10 +342,11 @@ footer .search select {
         background-color: transparent;
     }
     .video .video_slider .item .card{
-        width: 300px;
+        width: 340px;
     }
     .video .video_slider .card-title{
-        margin: 15px 0;
+        padding: 29px 0 0 0;
+        min-height: 63px;
     }
     
     /* product page */

@@ -196,11 +196,11 @@ button.owl-prev:focus, button.owl-next:focus {
 }
 
 .sliderRightArrow {
-    filter: opacity(70%);
+    filter: opacity(50%);
 }
 .sliderLeftArrow {
     transform: rotate(180deg);
-    filter: opacity(70%);
+    filter: opacity(50%);
 }
 .sliderRightArrow:hover, .sliderLeftArrow:hover {
     filter: opacity(1);

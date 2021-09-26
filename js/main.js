@@ -23,7 +23,7 @@ $(document).ready(function () {
     });
     $(".carousel .owl-carousel").owlCarousel({
         loop: true,
-        autoplay: true,
+        autoplay: false,
         margin: 0,
         nav: true,
         navText: ["<img class='sliderLeftArrow' src='/images/slider-arrow.png'>", "<img class='sliderRightArrow' src='/images/slider-arrow.png'>"],
@@ -178,27 +178,41 @@ var newSlider = $('.news_slider') ;
 				items:2
 			},
 			768:{
-				items:2
+				items:2,
+                center:true
 			},
 			992:{
 				items:4,
 			}
 		}
 	});
-    newSlider.ready(function() {
-        for (let slider = 0; newSlider < newSlider.length; slider++) {
-            $('.owl-item.active .item:last-child').css('border-right','0');
-            
-        }
-    });
+    // $(document).ready(function(){
+    //     // if ($('.video_slider .owl-item  :last').find('active')){
+    //     //         $('.video_slider .owl-item.active .item').css('border-right','0')
+    //     // }
+    //     // $( ".video_slider .owl-item.active .item" ).last().css('border-right','0');
+
+    //     var carouselLength = $('.owl-item.active').length - 1;
+    
+    //     // If there is more than one item
+    //     if (carouselLength) {
+    //         $('.owl-item.active .item').addClass('hahaha');
+    //     }
+    // });
+    // if ($('.owl-item.active:last-child').find('.active')){
+    //     $('.owl-item.active .item').css('border-right','0')
+    // }
+    //  $('.owl-item').find('.owl-item.active .item:last-child').css('border-right','0');
+    //  $('.owl-item.active .item:last-child').css('border-right','0');
+
 	// video slider
 var videoSlider = $('.video_slider') ;
 	videoSlider.owlCarousel({
 		loop:true,
 		video:true,
         nav:true,
-        navText: ["<img class='sliderLeftArrow' src='images/slider-arrow.png'>", "<img class='sliderRightArrow' src='images/slider-arrow.png'>"],
-		margin:10,
+        navText: ["<img class='sliderLeftArrow' src='images/right-arrow-copy.png'>", "<img class='sliderRightArrow' src='images/right-arrow-copy.png'>"],
+		margin:1,
 		responsive:{
             0:{
                 items:1
@@ -215,7 +229,7 @@ var videoSlider = $('.video_slider') ;
 			}
 		}
 	});
-	
+
     // image function
     /*---background image---*/
 	function dataBackgroundImage() {
